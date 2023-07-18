@@ -762,7 +762,7 @@ namespace grove {
         while (isWifiConnected && retry > 0) {
             retry = retry - 1;
             // establish TCP connection
-            sendAtCmd("AT+CIPSTART=\"TCP\",\"api.thingspeak.com\",80")
+            sendAtCmd("AT+CIPSTART=\"TCP\",\"iot.rlp.schule\",80")
             result = waitAtResponse("OK", "ALREADY CONNECTED", "ERROR", 2000)
             if (result == 3) continue
 
